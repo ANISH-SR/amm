@@ -1,7 +1,6 @@
 use anchor_lang::error_code;
 use constant_product_curve::CurveError;
 
-
 #[error_code]
 pub enum AmmError {
     #[msg("DefaultError")]
@@ -43,7 +42,7 @@ pub enum AmmError {
     #[msg("Zero balance.")]
     ZeroBalance,
     #[msg("Swap error.")]
-    SwapError
+    SwapError,
 }
 
 impl From<CurveError> for AmmError {
